@@ -1,0 +1,29 @@
+﻿@page
+@model WPFASP.Pages.RegisterModel
+@{
+}
+
+
+<div class="CenterContainer">
+    <div id="RegisterForm">
+        <form method="post">
+            <div class="input-group mb-3">
+                <input name="email" type="text" style="border-radius: 5px 0px 0px 5px" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <span class="input-group-text" style="border-radius: 0px 5px 5px 0px" id="basic-addon2">@@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" style="border-radius: 5px 0px 0px 5px" id="basic-addon1">@@</span>
+                </div>
+                <input name="name" type="text" class="form-control" style="border-radius: 0px 5px 5px 0px" placeholder="Имя пользователя" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+
+            <div align="center">
+                <input type="submit" class="btn btn-outline-secondary" value="Зарегистрировать пользователя" />
+            </div>
+        </form>
+    </div>
+</div>

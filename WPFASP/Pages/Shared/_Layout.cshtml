@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href='Styles/Style.css?v=@Guid.NewGuid().ToString()' rel='stylesheet' type='text/css' />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width" />
+    <title>WPFASP</title>
+</head>
+<body>
+
+    <div>
+        <ul>
+            <li><a href="/Index">Главная</a></li>
+            <li><a href="/Register">Регистрация пользователя</a></li>
+            <li><a href="/Message">Отправить сообщение</a></li>
+        </ul>
+    </div>
+
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

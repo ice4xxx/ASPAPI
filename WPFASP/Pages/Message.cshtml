@@ -1,0 +1,36 @@
+﻿@page
+@model WPFASP.Pages.MessageModel
+@{
+}
+
+
+<div class="CenterContainer">
+    <div id="RegisterForm">
+        <form method="post">
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" style="border-radius: 5px 0px 0px 5px" for="inputGroupSelect01">Отправитель</label>
+                </div>
+                <select asp-for="SenderId" asp-items="Model.Users" style="flex-grow: 1"></select>
+            </div>
+            
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" style="border-radius: 5px 0px 0px 5px" for="inputGroupSelect01">Получатель</label>
+                </div>
+                <select asp-for="ReceiverId" asp-items="Model.Users" style="flex-grow: 1"></select>
+            </div>
+            
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" style="height: 100%; border-radius: 5px 0px 0px 5px">Текст сообщения</span>
+                </div>
+                <textarea class="form-control" aria-label="With textarea" asp-for="Message"></textarea>
+            </div>
+            
+            <div align="center" style="margin: 30px 0 0 0">
+                <input type="submit" class="btn btn-outline-secondary" value="Отправить сообщение" />
+            </div>
+        </form>
+    </div>
+</div>

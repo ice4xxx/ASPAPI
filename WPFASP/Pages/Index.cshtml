@@ -1,0 +1,38 @@
+﻿@page
+@using BLL
+@model WPFASP.Pages.IndexModel
+@{
+    ViewData["Title"] = "Обмен валюты";
+}
+
+
+<div id="UserList">
+    <h2 style="text-align: center">Список пользователей</h2>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col" style="text-align: center">Имя пользователя</th>
+                <th scope="col" style="text-align: center">Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Users.Count; i++)
+            {
+            <tr>
+                <th scope="row">@Model.Users[i].Id</th>
+                <td style="text-align: center">@Model.Users[i].UserName</td>
+                <td style="text-align: center">@Model.Users[i].Email</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div>
+    <div id="RandomUsersGenerator">
+        <form method="post" align="center">
+            <input type="submit" class="btn btn-outline-secondary" value="Сгенерировать пользователей" />
+        </form>
+    </div>
+</div>
